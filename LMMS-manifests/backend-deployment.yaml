@@ -26,7 +26,7 @@ spec:
             - name: DB_PORT
               value: 5432
             - name: DB_NAME
-              value: TE1N
+              value: LMM
             - name: PS_USER_LMMS
               valueFrom:
                 secretKeyRef:
