@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lmms-frontend
+  namespace: production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lmms-frontend
+  template:
+    metadata:
+      labels:
+        app: lmms-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: missaouisyrine/lmms-back:0.5 #${LMMS_BACK_REPO}:${IMAGE_TAG_FRONTEND}
+          ports:
+            - containerPort: 3000
