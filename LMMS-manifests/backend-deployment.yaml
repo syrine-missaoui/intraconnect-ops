@@ -15,18 +15,18 @@ spec:
     spec:
       containers:
         - name: backend
-          image: missaouisyrine/lmms-back:0.5 #${LMMS_FRONT_REPO}:${IMAGE_TAG_BACKEND}
+          image: missaouisyrine/lmms-back:0.5
           ports:
             - containerPort: 8090
           env:
             - name: SERVER_PORT
-              value: 8090 #"8090"
+              value: 8090
             - name: POSTGRES_DB
-              value: lmms-database.production.svc.k8s.pfe #"lmms-database.production.svc.k8s.pfe"
+              value: lmms-database.production.svc.k8s.pfe
             - name: DB_PORT
-              value: 5432 #"5432"
+              value: 5432
             - name: DB_NAME
-              value: TE1N #"LMM"
+              value: TE1N
             - name: PS_USER_LMMS
               valueFrom:
                 secretKeyRef:
