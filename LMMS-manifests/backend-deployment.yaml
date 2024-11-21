@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: missaouisyrine/lmms-back:0.5
+          image: missaouisyrine/lmms-back:1.0
           ports:
             - containerPort: 8090
           env:
