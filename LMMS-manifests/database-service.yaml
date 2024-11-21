@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lmms-db
+  name: lmms-database
   namespace: production
 spec:
   ports:
     - port: 5432
       targetPort: 5432
   selector:
-    app: lmms-db
+    app: lmms-database
   clusterIP: None
