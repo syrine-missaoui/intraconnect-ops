@@ -10,7 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: www.intraconnect.local
+    - host: appp.intraconnect.local
       http:
         paths:
           - path: /
