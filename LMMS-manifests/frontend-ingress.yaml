@@ -5,10 +5,12 @@ metadata:
   namespace: production
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   ingressClassName: nginx
   rules:
-    - host: www.intraconnect.local
+    - host: appp.intraconnect.local
       http:
         paths:
           - path: /
